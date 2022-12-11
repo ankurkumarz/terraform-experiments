@@ -31,3 +31,26 @@ terraform taint google_compute_instance.vm_instance
 
 # Provision Infrastructure
 
+Google Cloud allows customers to manage their own custom operating system images. This can be a great way to ensure the instances you provision with Terraform are pre-configured based on your needs. Packer is the perfect tool for this and includes a builder for Google Cloud.
+
+Terraform uses provisioners to upload files, run shell scripts, or install and trigger other software like configuration management tools.
+
+To define a provisioner:
+```
+resource "google_compute_instance" "vm_instance" {
+  name         = "terraform-instance"
+  machine_type = "f1-micro"
+  tags         = ["web", "dev"]
+  provisioner "local-exec" {
+    command = "echo ${google_compute_instance.vm_instance.name}:  ${google_compute_instance.vm_instance.network_interface[0].access_config[0].nat_ip} >> ip_address.txt"
+  }
+  # ...
+}
+```
+
+Commands to execute:
+```
+#Use terraform taint to tell Terraform to recreate the instance:
+terraform taint google_compute_instance.vm_instance
+terraform apply
+```
