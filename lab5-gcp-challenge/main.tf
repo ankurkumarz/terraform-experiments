@@ -23,10 +23,14 @@ module "instances" {
 }
 
 # Uncomment later
+/*
 module "storage" {
   source     = "./modules/storage"
 }
+*/
 
+# VPC section
+/*
 module "vpc" {
     source  = "terraform-google-modules/network/google"
     version = "~> 3.4.0"
@@ -50,10 +54,10 @@ module "vpc" {
             description           = "This subnet has a description"
         },
     ]
-}
+} */
 
 ## Add a firewall
-resource "google_compute_firewall" "tf-firewall"{
+/*resource "google_compute_firewall" "tf-firewall"{
   name    = "tf-firewall"
  network = "projects/<PROJECT_ID>/global/networks/VPC_Name"
 
@@ -64,4 +68,4 @@ resource "google_compute_firewall" "tf-firewall"{
 
   source_tags = ["web"]
   source_ranges = ["0.0.0.0/0"]
-}
+}*/

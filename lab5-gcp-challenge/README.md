@@ -64,3 +64,6 @@ terraform taint module.instances.google_compute_instance.Instance_name
 
 ##  Use a module from the Registry
 - Uncomment VPC section
+
+## Firweall
+- Uncomment firewall configuration
