@@ -1,0 +1,48 @@
+repo_name: ankurkumarz/terraform-experiments
+report_id: b895f05b523465bcde96cad50c584aec
+version: 0.1
+repo_type: Public
+timestamp: '2024-02-29T19:00:45+00:00'
+requested_by: ankurkumarz
+provider: github
+branch: main
+detected_tools_count: 3
+tools:
+- name: Git
+  description: Fast, scalable, distributed revision control system
+  website_url: http://git-scm.com/
+  open_source: true
+  hosted_saas: false
+  category: Build, Test, Deploy
+  sub_category: Version Control System
+  image_url: https://img.stackshare.io/service/1046/git.png
+  detection_source_url: https://github.com/ankurkumarz/terraform-experiments
+  detection_source: Repo Metadata
+- name: Terraform
+  description: Describe your complete infrastructure as code and build resources across
+    providers
+  website_url: https://www.terraform.io/
+  license: MPL-2.0
+  open_source: true
+  hosted_saas: false
+  category: Build, Test, Deploy
+  sub_category: Server Configuration and Automation
+  image_url: https://img.stackshare.io/service/1276/default_2316907c4199f912e2ed79cbdb99025c9e5e2665.png
+  detection_source_url: https://github.com/ankurkumarz/terraform-experiments/blob/main/lab2-taint-dependencies-gcp/main.tf
+  detection_source: lab2-taint-dependencies-gcp/main.tf
+  last_updated_by: Ankur Kumar
+  last_updated_on: 2022-12-11 01:37:06.000000000 Z
+- name: Terraform Registry
+  description: Describe your complete infrastructure as code and build resources across
+    providers
+  website_url: https://registry.terraform.io/
+  license: MPL-2.0
+  open_source: true
+  hosted_saas: false
+  category: Build, Test, Deploy
+  sub_category: Package Managers
+  image_url: https://img.stackshare.io/package_manager/49093/default_cdf079d244bded073d455911e6ce679abb1b77ab.png
+  detection_source_url: https://github.com/ankurkumarz/terraform-experiments/blob/main/lab2-taint-dependencies-gcp/main.tf
+  detection_source: lab2-taint-dependencies-gcp/main.tf
+  last_updated_by: Ankur Kumar
+  last_updated_on: 2022-12-11 01:37:06.000000000 Z
